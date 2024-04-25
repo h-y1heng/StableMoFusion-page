@@ -38,6 +38,10 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .transformed{
+      transform: scale(1, 1);
+    }
   </style>
 </head>
 <body>
@@ -81,17 +85,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="#" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="#" target="_blank"
@@ -130,25 +123,6 @@
 
 
 <!-- Paper abstract -->
-<!--<section class="section hero is-light">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Thanks to the powerful generative capacity of diffusion models, recent years have witnessed rapid progress in human motion generation. Existing diffusion-based methods employ disparate network architectures and training strategies. The effect of the design of each component is still unclear.-->
-<!--In addition, the iterative denoising process consumes considerable computational overhead, which is prohibitive for real-time scenarios such as virtual characters and humanoid robots. For this reason, we first conduct a comprehensive investigation into network architectures, training strategies, and inference processs.-->
-<!--Based on the profound analysis, we tailor each component for efficient high-quality human motion generation. Despite the promising performance, the tailored model still suffers from foot skating which is an ubiquitous issue in diffusion-based solutions.-->
-<!--To eliminate footskate, we identify foot-ground contact and correct foot motions along the denoising process. By organically combining these well-designed components together, we present StableMoFusion, a robust and efficient framework for human motion generation.-->
-<!--Extensive experimental results show that our StableMoFusion performs favorably against current state-of-the-art methods.-->
-
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
   <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -198,7 +172,7 @@ Extensive experimental results show that our StableMoFusion performs favorably a
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Comparison with the state-of-the-art</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel" class="carousel results-carousel transformed">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
@@ -284,6 +258,33 @@ Extensive experimental results show that our StableMoFusion performs favorably a
 <!-- End video carousel -->
 
 
+  <!-- Additional Visualizations -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Additional Visualizations</h2>
+      <div id="results-carousel" class="carousel results-carousel transformed">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="50%">
+            <!-- Your video file here -->
+            <source src="static/videos/additional_videos_264/stand.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="50%">
+            <!-- Your video file here -->
+            <source src="static/videos/additional_videos_264/put.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
 <!--BibTex citation -->
   <section class="hero is-small">
   <div class="hero-body">
@@ -303,6 +304,7 @@ Extensive experimental results show that our StableMoFusion performs favorably a
       </div>
 </div>
 </div>
+  </section>
 <!--End BibTex citation -->
 
 
